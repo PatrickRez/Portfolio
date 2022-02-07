@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&family=Josefin+Slab:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,600&display=swap');
+@import url(<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />);
+
+
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    /*Ajuste de imagem*/
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    animation: zoom 12s;
+    /* Translúcido */
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.6);
+    }
+
+    100% {
+        transform: scale(1)
+    }
+
+    /*animação*/
+}
+
+.banner {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+}
+
+.banner h1 {
+    color: #fff;
+    font-size: 3.5rem;
+    font-family: 'Baloo 2', serif;
+    font-weight: 300;
+    text-shadow: .2rem .3rem 2px rgba(0, 0, 0, 0.4);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    animation: moveBanner 1s 0.5 forwards;
+
+}
+
+.banner p {
+    font-family: 'Josefin+Slab', serif;
+    color: #ffff;
+    font-size: 2rem;
+    text-shadow: .2rem .3rem 2px rgba(0, 0, 0, 0.4);
+    margin-bottom: 2rem;
+    animation: moveBanner 1s 0.7 forwards;
+
+}
+
+.banner button {
+    font-family: "Mulish", serif;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    background-color: #ffffff10;
+    background-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    /*style mirror */
+    padding: 1rem 3rem;
+    /*Aumentar o espaço interno*/
+    border-radius: 12px;
+    /*arredondar pontas vivas*/
+    cursor: pointer;
+    /*cursor muda para informar possivel click*/
+    animation: moveBanner 1s 0.9 forwards;
+
+}
+
+.banner button:hover {
+    box-shadow: 0 30px 16px 0 rgba(0, 0, 0, 0.25), 0 17px 50px 0 rgba(0, 0, 0, 0.50);
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(10rem) rotateY(.30deg);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0) rotateY(0);
+    }
+}
